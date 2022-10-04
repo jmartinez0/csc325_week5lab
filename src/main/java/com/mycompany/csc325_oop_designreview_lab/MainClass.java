@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.csc325_oop_designreview_lab;
 
 import java.util.Scanner;
@@ -32,14 +28,21 @@ public class MainClass {
 		
 		// ToDo 13: submit using a pull request.
                 
+                //Using polymorphism to create new Student std1 but as a Freshman
                 Student std1 = new Freshman("James", 20, 12); // name, age, credits
                 
+                //Using polymorphism to create new Student std2 but as a Senior
                 Student std2 = new Senior("John", 30, 90);
                 
+                //Print the data for std1 and std2
                 System.out.println(std1);
-                
                 System.out.println(std2);
                 
+                //Creating a new Senior that has less than 85 credits - will throw an IllegalArgumentException
+                //Student std3 = new Senior("Melanie", 30, 80);
+                //System.out.println(std3);
+                
+                //Entering the GPAs for std1 and std2 for ToDo 11
                 System.out.println("Enter std1 GPA: ");
                 Scanner s = new Scanner(System.in);
                 int gpa1 = s.nextInt();
@@ -48,6 +51,8 @@ public class MainClass {
                 System.out.println("Enter std2 GPA: ");
                 int gpa2 = s.nextInt();
                 std2.setGPA(gpa2);
+                
+                //Printing the GPAs that the user entered for ToDo 11
                 System.out.println("std1 gpa: " + std1.getGPA());
                 System.out.println("std2 gpa: " + std2.getGPA());
                 
